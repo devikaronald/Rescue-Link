@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Persons - RescueLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Missing Person Reporting</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="safezones.html">Safe Zones</a>
+    <a href="reliefcamps.html">Relief Camps</a>
+    <a href="emergency.html">Emergency Contacts</a>
+    <a href="missing.html">Missing Persons</a>
+</nav>
+
+<section class="content">
+    <h2>Report a Missing Person</h2>
+
+    <form action="submit_missing.php" method="POST">
+        <label for="fullname">Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter age" required>
+
+        <label for="location">Last Seen Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location details" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Provide detailed description (clothing, height, distinguishing features, etc.)" rows="4"></textarea>
+
+        <button type="submit">Submit Report</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 RescueLink | Missing Support</p>
+</footer>
+
+<script src="validate.js"></script>
+</body>
+</html>
